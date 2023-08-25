@@ -21,17 +21,17 @@ void f_push(stack_t **head, unsigned int counter)
 		{ fprintf(stderr, "L%d: usage: push integer\n", counter);
 			fclose(bus.file);
 			free(bus.content);
-			free_stack(*head);
+			freeAStack(*head);
 			exit(EXIT_FAILURE); }}
 	else
 	{ fprintf(stderr, "L%d: usage: push integer\n", counter);
 		fclose(bus.file);
 		free(bus.content);
-		free_stack(*head);
+		freeAStack(*head);
 		exit(EXIT_FAILURE); }
 	n = atoi(bus.arg);
 	if (bus.lifi == 0)
-		addnode(head, n);
+		nodeadd(head, n);
 	else
 		addqueue(head, n);
 }
