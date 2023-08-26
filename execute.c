@@ -1,14 +1,14 @@
 #include "main.h"
 /**
-* execute - executes the opcode
-* @stack: head linked list - stack
+* execute - execute
+* @our_head: head of the 
 * @counter: line_counter
 * @file: poiner to main.h file
 * @content: line content
 * Return: no return
 */
 
-int execute(char *content, stack_t **stack, unsigned int counter, FILE *file)
+int execute(char *content, stack_t **our_head, unsigned int counter, FILE *file)
 {
 	instruction_t opst[] = {
 				{"push",  f_push}, {"pall", f_pall}, {"pint", f_pint},
@@ -25,7 +25,7 @@ int execute(char *content, stack_t **stack, unsigned int counter, FILE *file)
 				{"rotl",  f_rotl},
 				{"rotr",  f_rotr},
 				{"queue", f_queue},
-				{"stack", f_stack},
+				{"our_head", f_stack},
 				{NULL, NULL}
 				};
 
@@ -40,7 +40,7 @@ int execute(char *content, stack_t **stack, unsigned int counter, FILE *file)
 	while (opst[i].opcode && op)
 	{
 		if (strcmp(op, opst[i].opcode) == 0)
-		{	opst[i].f(stack, counter);
+		{	opst[i].f(our_head, counter);
 			return (0);
 		}
 		i++;
@@ -50,7 +50,7 @@ int execute(char *content, stack_t **stack, unsigned int counter, FILE *file)
 	{ fprintf(stderr, "L%d: unknown instruction %s\n", counter, op);
 		fclose(file);
 		free(content);
-		freeAStack(*stack);
+		freeAour_head(*our_head);
 		exit(EXIT_FAILURE); }
 	return (1);
 }

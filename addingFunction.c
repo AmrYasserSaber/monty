@@ -1,11 +1,10 @@
 #include "main.h"
 
 /**
- * add_top_two - adds the top two elements of the stack
- * @our_head: pointer to the our_head of the stack
- * @cnt: the line number in the bytecode file
- * Return: no return value
- * 
+ * add_top_two - adding
+ * @our_head: our pointer
+ * @cnt: counter
+ * Return: None
  */
 
 

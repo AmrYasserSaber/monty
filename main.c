@@ -8,6 +8,7 @@ bus_t bus = {NULL, NULL, NULL, 0};
 * @argv: main.h file location
 * Return: 0 on success
 */
+
 int main(int argc, char *argv[])
 {
 	char *content;
@@ -29,6 +30,7 @@ int main(int argc, char *argv[])
 		fprintf(stderr, "Error: Can't open file %s\n", argv[1]);
 		exit(EXIT_FAILURE);
 	}
+
 	while (read_line > 0)
 	{
 		content = NULL;
@@ -41,6 +43,7 @@ int main(int argc, char *argv[])
 		}
 		free(content);
 	}
+
 	freeAStack(stack);
 	fclose(file);
 	return (0);

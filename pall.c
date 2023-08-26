@@ -1,10 +1,11 @@
 #include "main.h"
 /**
- * f_pall - prints the stack
+ * f_pall - print.
  * @head: stack head
- * @counter: no used
- * Return: no return
+ * @counter: Not used.
+ * Return: None
 */
+
 void f_pall(stack_t **head, unsigned int counter)
 {
 	stack_t *h;

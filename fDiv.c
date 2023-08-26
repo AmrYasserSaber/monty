@@ -1,18 +1,18 @@
 #include "main.h"
 
 /**
- * fDiv - divides the top two elements of the stack.
- * @head: stack head
- * @counter: line_number
- * Return: no return
+ * fDiv - Divide
+ * @our_head: stack
+ * @cnt: line_number
+ * Return: None
  */
 
-void fDiv(stack_t **head, unsigned int counter)
+void fDiv(stack_t **our_head, unsigned int cnt)
 {
 	stack_t *h;
 	int len = 0, aux;
 
-	h = *head;
+	h = *our_head;
 
 	while (h)
 	{
@@ -22,21 +22,21 @@ void fDiv(stack_t **head, unsigned int counter)
 
 	if (len < 2)
 	{
-		fprintf(stderr, "L%d: can't div, stack too short\n", counter);
+		fprintf(stderr, "L%d: can't div, stack too short\n", cnt);
 		fclose(bus.file);
 		free(bus.content);
-		freeAStack(*head);
+		freeAStack(*our_head);
 		exit(EXIT_FAILURE);
 	}
 
-	h = *head;
+	h = *our_head;
 
 	if (h->n == 0)
 	{
-		fprintf(stderr, "L%d: division by zero\n", counter);
+		fprintf(stderr, "L%d: division by zero\n", cnt);
 		fclose(bus.file);
 		free(bus.content);
-		freeAStack(*head);
+		freeAStack(*our_head);
 		exit(EXIT_FAILURE);
 	}
 
@@ -44,6 +44,6 @@ void fDiv(stack_t **head, unsigned int counter)
 	h->next->n = aux;
 
 
-	*head = h->next;
+	*our_head = h->next;
 	free(h);
 }

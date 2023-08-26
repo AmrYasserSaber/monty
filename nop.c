@@ -1,12 +1,13 @@
 #include "main.h"
 /**
-  *f_nop- nothing
-  *@head: stack head
+  *f_nop- None
+  *@our_head: head of the stack.
   *@counter: line_number
-  *Return: no return
+  *Return: None
  */
-void f_nop(stack_t **head, unsigned int counter)
+
+void f_nop(stack_t **our_head, unsigned int counter)
 {
 	(void) counter;
-	(void) head;
+	(void) our_head;
 }
