@@ -44,7 +44,7 @@ extern bus_t bus;
  * @f: function to handle the opcode
  *
  * Description: opcode and its function
- * for stack, queues, LIFO, FIFO Holberton project
+ * for stack, queues, LIFO, FIFO
  */
 typedef struct instruction_s
 {
@@ -54,25 +54,25 @@ typedef struct instruction_s
 char *_realloc(char *ptr, unsigned int old_size, unsigned int new_size);
 ssize_t getstdin(char **lineptr, int file);
 char  *clean_line(char *content);
-void f_push(stack_t **head, unsigned int number);
+void fPush(stack_t **head, unsigned int number);
 void f_pall(stack_t **head, unsigned int number);
-void f_pint(stack_t **head, unsigned int number);
+void fPint(stack_t **head, unsigned int number);
 int execute(char *content, stack_t **head, unsigned int counter, FILE *file);
 void freeAStack(stack_t *head);
-void f_pop(stack_t **head, unsigned int counter);
-void f_swap(stack_t **head, unsigned int counter);
+void fPop(stack_t **head, unsigned int counter);
+void fSwap(stack_t **head, unsigned int counter);
 void add_top_two(stack_t **head, unsigned int counter);
 void f_nop(stack_t **head, unsigned int counter);
-void f_sub(stack_t **head, unsigned int counter);
+void fSub(stack_t **head, unsigned int counter);
 void fDiv(stack_t **head, unsigned int counter);
 void f_mul(stack_t **head, unsigned int counter);
 void fMod(stack_t **head, unsigned int counter);
 void f_pchar(stack_t **head, unsigned int counter);
-void f_pstr(stack_t **head, unsigned int counter);
-void f_rotl(stack_t **head, unsigned int counter);
-void f_rotr(stack_t **head, __attribute__((unused)) unsigned int counter);
-void nodeadd(stack_t **head, int n);
-void addqueue(stack_t **head, int n);
-void f_queue(stack_t **head, unsigned int counter);
-void f_stack(stack_t **head, unsigned int counter);
+void fPstr(stack_t **head, unsigned int counter);
+void fRotl(stack_t **head, unsigned int counter);
+void fRotr(stack_t **head, __attribute__((unused)) unsigned int counter);
+void addnode(stack_t **our_head, int n);
+void addQueue(stack_t **head, int n);
+void fQueue(stack_t **head, unsigned int counter);
+void fStack(stack_t **head, unsigned int counter);
 #endif

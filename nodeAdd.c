@@ -1,13 +1,13 @@
 #include "monty.h"
 
 /**
- * nodeadd - add
+ * add-node - add
  * @our_head: pointer
  * @n: value 
  * Return: None
  */
 
-void nodeadd(stack_t **our_head, int n)
+void addnode(stack_t **our_head, int n)
 {
 	stack_t *new_node, *aux;
 
