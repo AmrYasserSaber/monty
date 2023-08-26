@@ -25,7 +25,7 @@ typedef struct stack_s
 } stack_t;
 
 /**
- * struct bus_s - variables -args, 
+ * struct bus_s - variables -args,
  * @arg: value
  * @file: pointer to monty file
  * @content: line content
@@ -43,9 +43,9 @@ typedef struct bus_s
 extern bus_t bus;
 
 /**
- * struct instruction_s - opcode 
+ * struct instruction_s - opcode
  * @opcode: the opcode
- * @f: function 
+ * @f: function
  *
  * Description: opcode and its function
  */
