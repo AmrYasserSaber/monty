@@ -1,4 +1,4 @@
-#include "main.h"
+#include "monty.h"
 /**
  * fMod - computes
  * @our_head: stack our_head

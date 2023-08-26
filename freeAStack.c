@@ -1,4 +1,4 @@
-#include "main.h"
+#include "monty.h"
 /**
 * freeAStack - free the stack
 * @head: head of the stack

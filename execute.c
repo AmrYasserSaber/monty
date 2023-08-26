@@ -1,9 +1,9 @@
-#include "main.h"
+#include "monty.h"
 /**
 * execute - execute
 * @our_head: head of the 
 * @counter: line_counter
-* @file: poiner to main.h file
+* @file: poiner to monty.h file
 * @content: line content
 * Return: no return
 */
