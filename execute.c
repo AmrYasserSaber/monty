@@ -1,14 +1,14 @@
 #include "monty.h"
 /**
 * execute - execute
-* @our_head: head of the 
+* @stack: head of the stack 
 * @counter: line_counter
 * @file: poiner to monty.h file
 * @content: line content
 * Return: no return
 */
 
-int execute(char *content, stack_t **our_head, unsigned int counter, FILE *file)
+int execute(char *content, stack_t **stack, unsigned int counter, FILE *file)
 {
 	instruction_t opst[] = {
 				{"push",  f_push}, {"pall", f_pall}, {"pint", f_pint},
@@ -25,7 +25,7 @@ int execute(char *content, stack_t **our_head, unsigned int counter, FILE *file)
 				{"rotl",  f_rotl},
 				{"rotr",  f_rotr},
 				{"queue", f_queue},
-				{"our_head", f_stack},
+				{"stack", f_stack},
 				{NULL, NULL}
 				};
 
@@ -40,7 +40,7 @@ int execute(char *content, stack_t **our_head, unsigned int counter, FILE *file)
 	while (opst[i].opcode && op)
 	{
 		if (strcmp(op, opst[i].opcode) == 0)
-		{	opst[i].f(our_head, counter);
+		{	opst[i].f(stack, counter);
 			return (0);
 		}
 		i++;
@@ -50,7 +50,7 @@ int execute(char *content, stack_t **our_head, unsigned int counter, FILE *file)
 	{ fprintf(stderr, "L%d: unknown instruction %s\n", counter, op);
 		fclose(file);
 		free(content);
-		freeAour_head(*our_head);
+		freeAStack(*stack);
 		exit(EXIT_FAILURE); }
 	return (1);
 }
